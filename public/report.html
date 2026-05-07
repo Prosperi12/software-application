@@ -1,334 +1,159 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chat &amp; Communication | The Academic Curator</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-tint": "#366847",
-                    "secondary-fixed": "#c8ecc8",
-                    "on-error-container": "#93000a",
-                    "on-background": "#191c1d",
-                    "secondary-fixed-dim": "#acd0ad",
-                    "on-secondary": "#ffffff",
-                    "surface": "#f8fafb",
-                    "on-tertiary-container": "#e89ca5",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed": "#03210b",
-                    "tertiary-fixed-dim": "#ffb2bb",
-                    "on-secondary-fixed-variant": "#2f4e33",
-                    "inverse-on-surface": "#eff1f2",
-                    "surface-bright": "#f8fafb",
-                    "background": "#f8fafb",
-                    "surface-container": "#eceeef",
-                    "on-primary": "#ffffff",
-                    "on-surface": "#191c1d",
-                    "inverse-primary": "#9dd3aa",
-                    "surface-variant": "#e1e3e4",
-                    "surface-dim": "#d8dadb",
-                    "outline": "#717971",
-                    "on-primary-container": "#88bd95",
-                    "surface-container-low": "#f2f4f5",
-                    "secondary": "#466649",
-                    "on-tertiary-fixed-variant": "#6e353e",
-                    "tertiary": "#4f1c26",
-                    "primary-fixed-dim": "#9dd3aa",
-                    "primary-container": "#1a4d2e",
-                    "primary": "#00361a",
-                    "surface-container-high": "#e6e8e9",
-                    "outline-variant": "#c1c9bf",
-                    "on-secondary-container": "#4a6a4d",
-                    "surface-container-highest": "#e1e3e4",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed": "#00210e",
-                    "error": "#ba1a1a",
-                    "error-container": "#ffdad6",
-                    "primary-fixed": "#b8f0c5",
-                    "on-primary-fixed-variant": "#1d5031",
-                    "secondary-container": "#c5e9c5",
-                    "tertiary-fixed": "#ffd9dd",
-                    "inverse-surface": "#2e3132",
-                    "on-surface-variant": "#414942",
-                    "tertiary-container": "#6a323b",
-                    "on-tertiary-fixed": "#380b15",
-                    "on-error": "#ffffff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Plus Jakarta Sans"],
-                    "label": ["Plus Jakarta Sans"]
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Chat & Communication | The Academic Curator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#00361a",
+                        "primary-container": "#1a4d2e",
+                        "on-primary": "#ffffff",
+                        "background": "#f8fafb",
+                        "surface": "#f8fafb",
+                        "on-surface": "#191c1d",
+                        "on-surface-variant": "#414942",
+                        "outline-variant": "#c1c9bf",
+                        "secondary-container": "#c5e9c5",
+                        "on-secondary-container": "#4a6a4d",
+                        "surface-container": "#eceeef",
+                        "surface-container-low": "#f2f4f5",
+                        "surface-container-lowest": "#ffffff"
+                    }
+                }
             }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         h1, h2, h3 { font-family: 'Manrope', sans-serif; }
     </style>
 </head>
 <body class="bg-background text-on-surface flex h-screen overflow-hidden">
-<!-- Sidebar Navigation (SideNavBar JSON implementation) -->
-<aside class="h-screen w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col p-6 gap-4">
-<div class="mb-6">
-<h1 class="text-lg font-bold text-emerald-900 dark:text-emerald-500">Student Portal</h1>
-<p class="text-xs text-slate-500 font-medium tracking-wide">Academic Curator</p>
-</div>
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform duration-200 group" href="#">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-medium">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform duration-200 group" href="#">
-<span class="material-symbols-outlined">group</span>
-<span class="font-medium">Matches</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform duration-200 group" href="#">
-<span class="material-symbols-outlined">quiz</span>
-<span class="font-medium">Questionnaire</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-400 font-semibold rounded-lg group" href="#">
-<span class="material-symbols-outlined">forum</span>
-<span class="font-medium">Messages</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:translate-x-1 transition-transform duration-200 group" href="#">
-<span class="material-symbols-outlined">assessment</span>
-<span class="font-medium">Reports</span>
-</a>
-</nav>
-<button class="mt-auto w-full bg-primary text-on-primary py-3 px-4 rounded-xl font-bold text-sm shadow-lg shadow-emerald-900/10 hover:opacity-90 transition-opacity">
-            New Match Request
-        </button>
+
+<aside class="h-screen w-64 border-r border-slate-200 bg-slate-50 flex flex-col p-6 gap-4">
+    <div class="mb-6">
+        <h1 class="text-lg font-bold text-emerald-900">Student Portal</h1>
+        <p class="text-xs text-slate-500 font-medium tracking-wide">Academic Curator</p>
+    </div>
+    <nav class="flex-1 space-y-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/dashboard">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-medium">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/dashboard">
+            <span class="material-symbols-outlined">group</span>
+            <span class="font-medium">Matches</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/questionnaire">
+            <span class="material-symbols-outlined">quiz</span>
+            <span class="font-medium">Questionnaire</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 bg-emerald-100/50 text-emerald-900 font-semibold rounded-lg" href="/portal">
+            <span class="material-symbols-outlined">forum</span>
+            <span class="font-medium">Messages</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/report">
+            <span class="material-symbols-outlined">assessment</span>
+            <span class="font-medium">Reports</span>
+        </a>
+    </nav>
+    <button class="mt-auto w-full bg-primary text-on-primary py-3 px-4 rounded-xl font-bold text-sm shadow-lg hover:opacity-90 transition-opacity">
+        New Match Request
+    </button>
 </aside>
-<!-- Main Content Area -->
+
 <main class="flex-1 flex flex-col relative overflow-hidden bg-white">
-<!-- Top Navigation (TopNavBar JSON implementation) -->
-<header class="fixed top-0 right-0 left-64 z-50 bg-white/80 backdrop-blur-xl h-20 flex items-center justify-between px-8">
-<div class="flex items-center gap-8">
-<span class="text-2xl font-black tracking-tighter text-emerald-900">The Academic Curator</span>
-<nav class="hidden md:flex gap-6">
-<a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="#">Portal</a>
-<a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="#">Matches</a>
-<a class="text-emerald-900 border-b-2 border-emerald-900 pb-1" href="#">Chat</a>
-<a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="#">Admin</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<div class="relative">
-<input class="bg-surface-container-low border-none rounded-full px-6 py-2 text-sm w-64 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search conversations..." type="text"/>
-</div>
-<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
-<span class="material-symbols-outlined">account_circle</span>
-</button>
-</div>
-</header>
-<!-- Chat Layout -->
-<section class="flex flex-1 pt-20 h-full overflow-hidden">
-<!-- Conversations List -->
-<div class="w-80 border-r border-outline-variant/15 flex flex-col bg-surface-container-lowest">
-<div class="p-6">
-<h2 class="text-xl font-bold text-primary mb-1">Messages</h2>
-<p class="text-xs text-on-surface-variant">4 active conversations</p>
-</div>
-<div class="flex-1 overflow-y-auto space-y-1 px-3">
-<!-- Active Conversation -->
-<div class="p-3 bg-primary/5 rounded-xl flex gap-3 cursor-pointer">
-<div class="relative">
-<img class="w-12 h-12 rounded-lg object-cover" data-alt="portrait of a young female student with glasses and a friendly smile in a library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDadQZ4JecKy1WQyluq1FFI7NHozM_DcwEyIg5m_foxE77XDPMI0EcgdaSuY7cu-X8_5uDXvqpc-ghBVBqv_X2TdIrq64eNauKAGUBC-1zbjQZujm0auJFN4zPQKXIRVBzKIZECEwt0TvpKHnPUQZbGotZ1CPMEPZHuwy3FkxstFJymkpXUlBIrghqdFFtz3l-5f_Jkc9GAL1_wdrgEs_7AqszZ205y6ntJcRvmByy9Z8GHDWZwtVrSFgUyJJLOLo0Zgw9o6Rs_22P0"/>
-<div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-baseline">
-<h3 class="text-sm font-bold truncate">Elena Thorne</h3>
-<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">2m ago</span>
-</div>
-<p class="text-xs text-primary font-semibold truncate">Can you check the lease...</p>
-</div>
-</div>
-<!-- Other Conversations -->
-<div class="p-3 hover:bg-surface-container-low rounded-xl flex gap-3 cursor-pointer transition-colors">
-<img class="w-12 h-12 rounded-lg object-cover grayscale" data-alt="portrait of a young man with a focused expression wearing a dark sweater outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNVoP7utoJEkgWDaE4GP4PzFnJSQ1ENU6rao18WkET8IjVnw5ExMgn8Z5IAI_k_svy9fN3VWPkMnUWjLL6w6SK-kIvqKQwkHU6o9QAEg8tkQbemOwK-uC053jkUgiaAbRAnE5ZcHylMSMNMaJrn53pGhmHeOuoJx8vPix-xzTpJXbapg4nSGiVXfoQ5lkCLFXaj9_vcIAtOa1PMlt4RE3RdQyybki0cIaMKA7xBtiurhOTYNf4j2kAAyxgEz39TnvcKfJ3Kmm4Ipzx"/>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-baseline">
-<h3 class="text-sm font-bold truncate">Marcus Chen</h3>
-<span class="text-[10px] text-on-surface-variant tracking-tighter">1h ago</span>
-</div>
-<p class="text-xs text-on-surface-variant truncate">That works for me!</p>
-</div>
-</div>
-<div class="p-3 hover:bg-surface-container-low rounded-xl flex gap-3 cursor-pointer transition-colors opacity-80">
-<img class="w-12 h-12 rounded-lg object-cover grayscale" data-alt="young professional woman smiling warmly in a bright modern office interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvB_ABrXqnUfeTleVgqhBo373lMpDjt5tFo1HEXgRzlkcnVYFfO1Zv-lbM_L_oq0gf3Ip3ZKoPvt6GzZnbZ3vMWjuKt7bt5vBKMHuI8WscI7wZdI9YISbSJWL6f6QwSMNzw9BP-dUSixG4pNYrGBjbWvQaIA6sqOAVBOjSfi5ORtqJ_pDtWHUJ2Zjm253wzxR5rQWjHxqddEPwMqa0Jvtd0OqJu6_4SbJFQ8ByTvl2jfkVAgg0fEFSyxA-aIZttd0AEvoNIryUB9mf"/>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-baseline">
-<h3 class="text-sm font-bold truncate">Sarah Jenkins</h3>
-<span class="text-[10px] text-on-surface-variant tracking-tighter">Yesterday</span>
-</div>
-<p class="text-xs text-on-surface-variant truncate">I'll bring the boxes.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Chat Window -->
-<div class="flex-1 flex flex-col bg-white">
-<!-- Chat Header -->
-<div class="h-20 border-b border-outline-variant/15 px-8 flex items-center justify-between">
-<div class="flex items-center gap-4">
-<img class="w-10 h-10 rounded-lg object-cover" data-alt="closeup profile of a student for the chat header UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksySVGelyvRbIzMBYXTa-_TgKm1xVjVz5TQl3OJyG83Z3kLV3SJjZhFEvNUZmJUdyD0GDXVxM5Jbygnxm6Qfenf8hKH8_OMbSIkSGHNE1LvlshtrDjWdr3_MR5fTvVKjSylBZQ_5fxtf0jd9sfvQ6OJmWvUjSTBAVLNooFN4FvZCxawumPClycJknm8EEW71d-hCfn3IchcpGH6OeJ5R5qMl7QqroHC1mq8FmASfJVSAf-tpqD8v7XmwJUBRKI0q5usKZC7Jrc8WE"/>
-<div>
-<h3 class="font-bold text-on-surface">Elena Thorne</h3>
-<div class="flex items-center gap-1.5">
-<div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-<span class="text-[10px] font-bold text-emerald-700 tracking-wider uppercase">Active Now</span>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="flex items-center gap-2 px-4 py-2 text-tertiary font-bold text-xs bg-tertiary-fixed/30 rounded-full hover:bg-tertiary-fixed/50 transition-colors">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">report</span>
-                            Anonymous Report
+    <header class="bg-white border-b border-outline-variant/15 h-20 flex items-center justify-between px-8">
+        <div class="flex items-center gap-8">
+            <span class="text-2xl font-black tracking-tighter text-emerald-900">The Academic Curator</span>
+            <nav class="hidden md:flex gap-6">
+                <a class="text-emerald-900 border-b-2 border-emerald-900 pb-1" href="/portal">Portal</a>
+                <a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="/dashboard">Matches</a>
+                <a class="text-slate-500 font-medium hover:text-emerald-700 transition-colors" href="/report">Admin</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+                <span class="material-symbols-outlined">account_circle</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="flex flex-1 h-full overflow-hidden">
+        <div class="w-80 border-r border-outline-variant/15 flex flex-col bg-surface-container-lowest">
+            <div class="p-6">
+                <h2 class="text-xl font-bold text-primary mb-1">Messages</h2>
+                <p class="text-xs text-on-surface-variant">4 active conversations</p>
+            </div>
+            <div class="flex-1 overflow-y-auto space-y-1 px-3">
+                <div class="p-3 bg-primary/5 rounded-xl flex gap-3 cursor-pointer border border-primary/10">
+                    <div class="relative">
+                        <img class="w-12 h-12 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDadQZ4JecKy1WQyluq1FFI7NHozM_DcwEyIg5m_foxE77XDPMI0EcgdaSuY7cu-X8_5uDXvqpc-ghBVBqv_X2TdIrq64eNauKAGUBC-1zbjQZujm0auJFN4zPQKXIRVBzKIZECEwt0TvpKHnPUQZbGotZ1CPMEPZHuwy3FkxstFJymkpXUlBIrghqdFFtz3l-5f_Jkc9GAL1_wdrgEs_7AqszZ205y6ntJcRvmByy9Z8GHDWZwtVrSFgUyJJLOLo0Zgw9o6Rs_22P0"/>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-sm font-bold truncate">Elena Thorne</h3>
+                            <span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">2m ago</span>
+                        </div>
+                        <p class="text-xs text-primary font-semibold truncate">Can you check the lease...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-1 flex flex-col bg-white">
+            <div class="h-20 border-b border-outline-variant/15 px-8 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <img class="w-10 h-10 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDksySVGelyvRbIzMBYXTa-_TgKm1xVjVz5TQl3OJyG83Z3kLV3SJjZhFEvNUZmJUdyD0GDXVxM5Jbygnxm6Qfenf8hKH8_OMbSIkSGHNE1LvlshtrDjWdr3_MR5fTvVKjSylBZQ_5fxtf0jd9sfvQ6OJmWvUjSTBAVLNooFN4FvZCxawumPClycJknm8EEW71d-hCfn3IchcpGH6OeJ5R5qMl7QqroHC1mq8FmASfJVSAf-tpqD8v7XmwJUBRKI0q5usKZC7Jrc8WE"/>
+                    <div>
+                        <h3 class="font-bold text-on-surface">Elena Thorne</h3>
+                        <div class="flex items-center gap-1.5">
+                            <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                            <span class="text-[10px] font-bold text-emerald-700 tracking-wider uppercase">Active Now</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="window.location.href='/report'" class="flex items-center gap-2 px-4 py-2 text-tertiary font-bold text-xs bg-error-container/20 rounded-full hover:bg-error-container/30 transition-colors">
+                    <span class="material-symbols-outlined text-sm">report</span>
+                    Anonymous Report
+                </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-8 space-y-6">
+                <div class="flex items-end gap-3 max-w-[80%]">
+                    <div class="bg-surface-container-low p-4 rounded-2xl rounded-bl-none text-sm">
+                        Hey! I was thinking about the cleaning schedule. Any preferences?
+                    </div>
+                </div>
+                <div class="flex items-end gap-3 max-w-[80%] ml-auto flex-row-reverse">
+                    <div class="bg-primary text-on-primary p-4 rounded-2xl rounded-br-none text-sm shadow-lg">
+                        I'm flexible, but I'd love to handle the kitchen!
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-outline-variant/15 bg-white">
+                <div class="max-w-4xl mx-auto flex items-center gap-4">
+                    <div class="flex-1 bg-surface-container-low rounded-2xl flex items-center px-6 py-4">
+                        <input class="flex-1 bg-transparent border-none p-0 focus:ring-0 text-sm" placeholder="Type your message..." type="text"/>
+                        <button class="ml-4 text-primary">
+                            <span class="material-symbols-outlined">send</span>
                         </button>
-<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full">
-<span class="material-symbols-outlined">more_vert</span>
-</button>
-</div>
-</div>
-<!-- Messages Canvas -->
-<div class="flex-1 overflow-y-auto p-8 space-y-6">
-<!-- Date Separator -->
-<div class="flex justify-center">
-<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase bg-surface-container px-3 py-1 rounded-full">Today, Oct 14</span>
-</div>
-<!-- Safety Disclaimer -->
-<div class="max-w-xl mx-auto bg-surface-container-low p-4 rounded-xl border-l-4 border-primary/20">
-<div class="flex gap-3">
-<span class="material-symbols-outlined text-primary">verified_user</span>
-<div class="text-xs leading-relaxed text-on-surface-variant">
-<strong class="text-primary block mb-1">Academic Curator Safety Notice</strong>
-                                Your safety is our priority. If you feel uncomfortable, pressured, or unsafe in this conversation, use the <span class="text-tertiary font-bold italic">Anonymous Report</span> button. Reports are reviewed by our student housing team within 2 hours.
-                            </div>
-</div>
-</div>
-<!-- Received Message -->
-<div class="flex items-end gap-3 max-w-[80%]">
-<img class="w-8 h-8 rounded-lg object-cover" data-alt="avatar of student Elena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFkuL3Dybs-nf4Z_8-YDWICTaT56VRt6Qj6iRv2ORpqLBupyzfDDKzJu9lpUYyWVTi-CGp6G5lnF8eap1raPcTFqzG8I7Y43KzC4-CQWSf3x07VBF7dWuhoDpkEzcXag-SoS_hkHsHX1lL-7c9wNHx0ZqaYGuh2NIg2gi1xQkQbPn6kkQ7tPeTlEDM2VFP1SoFYZmsaKkfE4O-ytLLAI9rG__rNDMb3B3rCzx4IwteujqYs3gj9LwTQnkc9aJ1rRmAFAFUk1lKUpFx"/>
-<div class="bg-surface-container-low p-4 rounded-2xl rounded-bl-none text-sm leading-relaxed">
-                            Hey! I was thinking about the cleaning schedule for the first month. Do you have any preferences for the common areas?
-                        </div>
-</div>
-<!-- Sent Message -->
-<div class="flex items-end gap-3 max-w-[80%] ml-auto flex-row-reverse">
-<div class="bg-primary text-on-primary p-4 rounded-2xl rounded-br-none text-sm shadow-lg shadow-emerald-900/10 leading-relaxed">
-                            I'm pretty flexible, but I'd love to handle the kitchen chores. I'm a bit of a clean freak when it comes to cooking spaces! 
-                        </div>
-</div>
-<!-- Received Message -->
-<div class="flex items-end gap-3 max-w-[80%]">
-<img class="w-8 h-8 rounded-lg object-cover" data-alt="avatar of student Elena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxC5CN1PgINomsn_JgzukhDZiq5ocrN5mcUitLMwRDgNYyCn7Pt3FXxtwa6tIssK-1X8LmYXjIsYTTCNFRlcpRfonU8tkdht2cAy5YEfbazcxQ9_RsPFLBhZsPralOE-_laGY6dIdEIkX09S7qEOBCTb9M8fdZOBlPCMLtg1EjdVevyxT5HneT6Yz_kYj3iAOXpIOAiTNDxIxTk8lpaHGoIvEptZpA6aEGgYgLRTNuJ20YCPcKmYb-yPhbAazbuuK1ex-YVlE3JKXm"/>
-<div class="bg-surface-container-low p-4 rounded-2xl rounded-bl-none text-sm leading-relaxed">
-                            That's perfect! I actually hate doing dishes but don't mind vacuuming. Can you check the lease agreement I just uploaded to the portal?
-                        </div>
-</div>
-<!-- Typing Indicator -->
-<div class="flex items-center gap-2 text-on-surface-variant/50 ml-11">
-<div class="w-1 h-1 bg-current rounded-full animate-bounce"></div>
-<div class="w-1 h-1 bg-current rounded-full animate-bounce [animation-delay:0.2s]"></div>
-<div class="w-1 h-1 bg-current rounded-full animate-bounce [animation-delay:0.4s]"></div>
-</div>
-</div>
-<!-- Chat Input -->
-<div class="p-6 border-t border-outline-variant/15 bg-white">
-<div class="max-w-4xl mx-auto relative flex items-center gap-4">
-<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
-<span class="material-symbols-outlined">add_circle</span>
-</button>
-<div class="flex-1 bg-surface-container-low rounded-2xl flex items-center px-6 py-4 focus-within:bg-surface-container-high transition-colors">
-<input class="flex-1 bg-transparent border-none p-0 focus:ring-0 text-sm placeholder:text-on-surface-variant/60" placeholder="Type your message..." type="text"/>
-<button class="ml-4 text-primary p-1 hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Conflict Resolution Sidebar -->
-<div class="w-80 border-l border-outline-variant/15 flex flex-col bg-slate-50/50">
-<div class="p-6 bg-white border-b border-outline-variant/10">
-<h2 class="text-sm font-extrabold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-lg">auto_awesome</span>
-                        Resolution Guides
-                    </h2>
-<div class="space-y-4">
-<!-- Guide Card 1 -->
-<div class="group p-4 bg-white rounded-xl border border-transparent hover:border-emerald-100 hover:shadow-xl hover:shadow-emerald-900/5 transition-all cursor-pointer">
-<div class="flex items-center gap-3 mb-2">
-<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">cleaning_services</span>
-</div>
-<h3 class="text-sm font-bold text-on-surface">Cleaning Standards</h3>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed mb-3">Struggling with messy common areas? Try the "15-minute sync" method.</p>
-<span class="text-[10px] font-bold text-primary uppercase tracking-tighter group-hover:underline">Read Quick Tip</span>
-</div>
-<!-- Guide Card 2 -->
-<div class="group p-4 bg-white rounded-xl border border-transparent hover:border-emerald-100 hover:shadow-xl hover:shadow-emerald-900/5 transition-all cursor-pointer">
-<div class="flex items-center gap-3 mb-2">
-<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">volume_up</span>
-</div>
-<h3 class="text-sm font-bold text-on-surface">Noise Level Issues</h3>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed mb-3">Establish "Golden Hours" for focused studying and deep sleep.</p>
-<span class="text-[10px] font-bold text-primary uppercase tracking-tighter group-hover:underline">View Schedule Template</span>
-</div>
-<!-- Guide Card 3 -->
-<div class="group p-4 bg-white rounded-xl border border-transparent hover:border-emerald-100 hover:shadow-xl hover:shadow-emerald-900/5 transition-all cursor-pointer">
-<div class="flex items-center gap-3 mb-2">
-<div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-lg">payments</span>
-</div>
-<h3 class="text-sm font-bold text-on-surface">Shared Expenses</h3>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed mb-3">Learn how to split groceries and utilities without the awkwardness.</p>
-<span class="text-[10px] font-bold text-primary uppercase tracking-tighter group-hover:underline">Get App Recommendations</span>
-</div>
-</div>
-<!-- Support Footer -->
-<div class="mt-8 p-4 bg-emerald-900 text-on-primary rounded-2xl relative overflow-hidden">
-<div class="relative z-10">
-<p class="text-xs font-bold mb-1">Need a Mediator?</p>
-<p class="text-[10px] opacity-80 leading-tight mb-3">Sometimes it helps to have an objective third party.</p>
-<button class="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-colors">Request Admin help</button>
-</div>
-<!-- Decorative background element -->
-<div class="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl"></div>
-</div>
-</div>
-</div>
-</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-<!-- FAB for mobile contexts - Suppressed on Desktop/Settings context as per rules but implemented for complete UI -->
-<button class="md:hidden fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-emerald-900/20 z-[60]">
-<span class="material-symbols-outlined">edit_square</span>
-</button>
-</body></html>
+</body>
+</html>
