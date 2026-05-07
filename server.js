@@ -17,6 +17,10 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
 });
 
+
+app.get('/questionnaire', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'questionnaire.html'));
+});
 // When the URL is http://localhost:3000/portal
 app.get('/portal', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'portal.html'));
