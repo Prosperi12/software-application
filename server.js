@@ -1,36 +1,23 @@
 const express = require("express");
 const path = require("path");
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// FIX: This allows your server to read the data sent from your forms
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// Serve all your HTML/CSS/JS from the public folder
 app.use(express.static(path.join(__dirname, "public")));
 
-// ROUTE: The main page (Login)
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+// PAGE NAVIGATION
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "public/index.html")));
+app.get("/questionnaire", (req, res) => res.sendFile(path.join(__dirname, "public/questionnaire.html")));
+app.get("/dashboard", (req, res) => res.sendFile(path.join(__dirname, "public/dashboard.html")));
+app.get("/chat", (req, res) => res.sendFile(path.join(__dirname, "public/chat.html")));
 
-// ROUTE: The Questionnaire page
-app.get("/questionnaire", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "questionnaire.html"));
-});
-
-// ROUTE: Handling the Form Submission
-// This "functions" by receiving the data and sending the user to the dashboard
+// FORM SUBMISSION (Logic)
 app.post("/submit-data", (req, res) => {
-  const studentData = req.body;
-  console.log("New Student Data Received:", studentData);
-  
-  // Since we aren't using a database, we just redirect them to the dashboard
-  res.redirect("/dashboard.html"); 
+  console.log("Data received:", req.body);
+  // Instead of a DB, we just push them to the next success state
+  res.redirect("/dashboard"); 
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`App live at http://localhost:${PORT}`));
