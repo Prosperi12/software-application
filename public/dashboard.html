@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Dashboard | The Academic Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#366847",
+                        "secondary-fixed": "#c8ecc8",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#acd0ad",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8fafb",
+                        "on-tertiary-container": "#e89ca5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#03210b",
+                        "tertiary-fixed-dim": "#ffb2bb",
+                        "on-secondary-fixed-variant": "#2f4e33",
+                        "inverse-on-surface": "#eff1f2",
+                        "surface-bright": "#f8fafb",
+                        "background": "#f8fafb",
+                        "surface-container": "#eceeef",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "inverse-primary": "#9dd3aa",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d8dadb",
+                        "outline": "#717971",
+                        "on-primary-container": "#88bd95",
+                        "surface-container-low": "#f2f4f5",
+                        "secondary": "#466649",
+                        "on-tertiary-fixed-variant": "#6e353e",
+                        "tertiary": "#4f1c26",
+                        "primary-fixed-dim": "#9dd3aa",
+                        "primary-container": "#1a4d2e",
+                        "primary": "#00361a",
+                        "surface-container-high": "#e6e8e9",
+                        "outline-variant": "#c1c9bf",
+                        "on-secondary-container": "#4a6a4d",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#00210e",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b8f0c5",
+                        "on-primary-fixed-variant": "#1d5031",
+                        "secondary-container": "#c5e9c5",
+                        "tertiary-fixed": "#ffd9dd",
+                        "inverse-surface": "#2e3132",
+                        "on-surface-variant": "#414942",
+                        "tertiary-container": "#6a323b",
+                        "on-tertiary-fixed": "#380b15",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(248, 250, 251, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 bg-slate-50 border-r border-slate-200 flex flex-col p-6 gap-4 sticky top-0">
+<div class="mb-8">
+<h1 class="text-lg font-bold text-emerald-900 font-headline">The Academic Curator</h1>
+<p class="text-xs text-slate-500 font-medium">Student Portal</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-3 px-4 py-3 bg-emerald-100/50 text-emerald-900 font-semibold rounded-lg transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Matches</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span>Questionnaire</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span>Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+<span>Reports</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-200">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 px-4 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    New Match Request
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-10 max-w-7xl">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-extrabold font-headline text-primary tracking-tight mb-2">Welcome back, Alex.</h2>
+<p class="text-on-surface-variant">Here are your top-curated roommates for the upcoming Fall semester.</p>
+</div>
+<!-- Notification Banner -->
+<div class="bg-tertiary-container text-on-tertiary-container px-6 py-4 rounded-xl flex items-center gap-4 max-w-md shadow-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="event_note">event_note</span>
+<div class="text-sm">
+<p class="font-bold">Monthly Check-in with RA</p>
+<p class="opacity-80">Friday, Oct 15 • 4:00 PM</p>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Top Matches Section (Left Column) -->
+<section class="col-span-12 lg:col-span-8 space-y-6">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-xl font-bold font-headline text-primary">Top Matches</h3>
+<a class="text-sm font-semibold text-primary underline underline-offset-4" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Match Card 1 (Active/Selected) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border-2 border-primary shadow-sm relative group cursor-pointer ring-4 ring-primary/5">
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold">98% Match</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="close-up portrait of a young college student with a friendly expression in a sunlit university courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCdxqEsfeNIDjF-udR1-2K8DoVzSR8kC2pheKy_fT-buC0frzdsbxrJURIHdl6lcjr1t6SE6TRJ6K3KwhQEN02IkoCWcyg149UxIuJBvFOhBBW5qXHnccP2Jbul2OsUFPhIAn4aifJ0YBl0d2JOxLAFJNEvvHk8mQaYkkXzPLUbsk7tbpTXqxzqDlwzULCQeJ4I9ZvsyAYVTWYw5i1D2u2lSC6Tu7PghTxcouJlIBymta7ZhA1Igml47UqTQW1AqOmbIouufpIoq9I"/>
+<div>
+<h4 class="font-bold text-lg">Ethan Caldwell</h4>
+<p class="text-sm text-on-surface-variant">Architecture • Year 3</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-medium">Night Owl</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-medium">Jazz Enthusiast</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-medium">Vegan Friendly</span>
+</div>
+</div>
+</div>
+<!-- Match Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/15 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="absolute top-4 right-4 bg-surface-container-high text-primary px-3 py-1 rounded-full text-xs font-bold">94% Match</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="professional headshot of a student wearing glasses and a denim shirt against a neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgZ8okKQZP_wu_90NXSorKz1TqLE3vnOeyKzHKXRwVRg9IdTQ6xt5iqJ36s8tEdestTPGaylcZ8Fl3YyJNoG97OQEVQHKNKbXPw7Y-aLSxpI11bQHDQMOSR1HKTwplkctaLF-BWW26L0zGHeEJp0xk7IDOqUfxdbgsGNC5dm_tjs8IHKB9sdr8ve_2v-DbIM_VeewAFm8M3JDvMmY-mINsNCJZguIRstO5iuC13V6CITL-_7PXuYeCL1ewhFGAs26urialN6DF5OND"/>
+<div>
+<h4 class="font-bold text-lg">Marcus Chen</h4>
+<p class="text-sm text-on-surface-variant">Data Science • Year 2</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Early Bird</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Gym Regular</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Quiet Study</span>
+</div>
+</div>
+</div>
+<!-- Match Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/15 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+<div class="absolute top-4 right-4 bg-surface-container-high text-primary px-3 py-1 rounded-full text-xs font-bold">91% Match</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="warm and vibrant portrait of a female student in an outdoor library setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd_PHSm0uR3t0MH782lMZt78YyHzT5zRbnPeuH8bg53Ac9fRH4qNPrJ-kABogsFaHdt39hDdCVykPcJRum6cQ2qMB57XqHtZ-lm7rtBtHg75r1QSy6GNytrlBOoQH3NXVayjxW6MqqHoBXnzA2EbJOaQI5SCVYc1DL-rkyKJBoZJPdOVp6lWIU-DqRqs0BxpgOAdSbaZPPuEGXBOl16uZbvfYXIWML1-biJwAkJ1v8pAeyDe3kOFl8dFoqdBNzEIVws85cgPiRNvFt"/>
+<div>
+<h4 class="font-bold text-lg">Jordan Taylor</h4>
+<p class="text-sm text-on-surface-variant">Philosophy • Year 4</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Bookworm</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Non-Smoker</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-medium">Organized</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Compatibility Breakdown Widget (Right Column) -->
+<aside class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-low p-8 rounded-xl h-full">
+<div class="text-center mb-8">
+<div class="inline-block p-1 rounded-full bg-gradient-to-tr from-primary to-primary-fixed-dim mb-4">
+<img alt="Focus Profile" class="w-24 h-24 rounded-full border-4 border-surface-container-low object-cover" data-alt="detailed profile shot of Ethan Caldwell in a minimalist urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrF1ZV8e1FohFvruCPxntw3u4LXWCM0j7cEv-8WguXqHxiykUokoqEJeKzaXrI0tzeOrjr3X-xHPD6TJmxFCoBU96VLRVilbQ1Zvav3X-16YEDCuB2Pf5TVFQAPsuJJCdatiQuSDvc_JwPO-eNfTf-ekuPNlBBNdnpQbn7By5ZIwz5VCWsK5EKURxWvQtU1TNbJdBw75Ge3UVcO-YIPndPLm-g_GqR1Ry5tJu9w6j4rdSQPnvXDE1pQ9lQPcSibm5cLjLnM8KJ_kD1"/>
+</div>
+<h3 class="text-2xl font-extrabold font-headline text-primary">Compatibility Analysis</h3>
+<p class="text-sm text-on-surface-variant">Ethan Caldwell &amp; You</p>
+</div>
+<div class="space-y-6 mb-10">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-bold">Lifestyle Alignment</span>
+<span class="text-primary font-bold">95%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-bold">Study Habits</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-bold">Social Preferences</span>
+<span class="text-primary font-bold">92%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg mb-8">
+<h4 class="text-xs font-black uppercase tracking-widest text-on-surface-variant mb-3">Key Overlap</h4>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                    Both value a clean workspace
+                                </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                    Mutual respect for quiet hours (11pm)
+                                </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                    Shared interest in Classical Music
+                                </li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold tracking-tight text-lg shadow-xl hover:translate-y-[-2px] transition-transform active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+                            Start Chat
+                        </button>
+</div>
+</aside>
+</div>
+<!-- Secondary Stats Section (Editorial Columns) -->
+<section class="mt-16 border-t border-outline-variant/15 pt-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<span class="text-tertiary font-bold tracking-tighter text-3xl">12</span>
+<h5 class="font-headline font-bold text-lg leading-tight">Curated matches pending your review</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our algorithm has identified twelve new candidates that meet your 85%+ threshold.</p>
+</div>
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-tighter text-3xl">4</span>
+<h5 class="font-headline font-bold text-lg leading-tight">Mutual interests with your top match</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Ethan and you both indicated 'Architecture History' as a primary passion.</p>
+</div>
+<div class="space-y-4">
+<span class="text-emerald-500 font-bold tracking-tighter text-3xl">22</span>
+<h5 class="font-headline font-bold text-lg leading-tight">Days until housing selection deadline</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Make sure to finalize your pairing before the portal closes for the semester.</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>
