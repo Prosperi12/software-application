@@ -1,23 +1,30 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+// This line is CRITICAL: It lets the server find your CSS/Images in the 'public' folder
+app.use(express.static('public'));
 
-// ALL PAGE ROUTES
-app.get("/", (req, res) => res.sendFile(path.join(__dirname, "public/index.html")));
-app.get("/dashboard", (req, res) => res.sendFile(path.join(__dirname, "public/dashboard.html")));
-app.get("/portal", (req, res) => res.sendFile(path.join(__dirname, "public/portal.html")));
-app.get("/questionnaire", (req, res) => res.sendFile(path.join(__dirname, "public/questionnaire.html")));
-app.get("/report", (req, res) => res.sendFile(path.join(__dirname, "public/report.html")));
+// --- THE NAVIGATION MAP (ROUTES) ---
 
-// FORM LOGIC
-app.post("/submit-data", (req, res) => {
-  console.log("Data received:", req.body);
-  res.redirect("/dashboard"); 
+// When the URL is http://localhost:3000/
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// When the URL is http://localhost:3000/dashboard
+app.get('/dashboard', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+});
+
+// When the URL is http://localhost:3000/portal
+app.get('/portal', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'portal.html'));
+});
+
+// When the URL is http://localhost:3000/report
+app.get('/report', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'report.html'));
+});
+
+app.listen(3000, () => console.log('Server active on Port 3000'));
