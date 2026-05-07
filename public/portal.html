@@ -1,83 +1,82 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Admin RA Management Portal | The Academic Curator</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-tint": "#366847",
-                    "secondary-fixed": "#c8ecc8",
-                    "on-error-container": "#93000a",
-                    "on-background": "#191c1d",
-                    "secondary-fixed-dim": "#acd0ad",
-                    "on-secondary": "#ffffff",
-                    "surface": "#f8fafb",
-                    "on-tertiary-container": "#e89ca5",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed": "#03210b",
-                    "tertiary-fixed-dim": "#ffb2bb",
-                    "on-secondary-fixed-variant": "#2f4e33",
-                    "inverse-on-surface": "#eff1f2",
-                    "surface-bright": "#f8fafb",
-                    "background": "#f8fafb",
-                    "surface-container": "#eceeef",
-                    "on-primary": "#ffffff",
-                    "on-surface": "#191c1d",
-                    "inverse-primary": "#9dd3aa",
-                    "surface-variant": "#e1e3e4",
-                    "surface-dim": "#d8dadb",
-                    "outline": "#717971",
-                    "on-primary-container": "#88bd95",
-                    "surface-container-low": "#f2f4f5",
-                    "secondary": "#466649",
-                    "on-tertiary-fixed-variant": "#6e353e",
-                    "tertiary": "#4f1c26",
-                    "primary-fixed-dim": "#9dd3aa",
-                    "primary-container": "#1a4d2e",
-                    "primary": "#00361a",
-                    "surface-container-high": "#e6e8e9",
-                    "outline-variant": "#c1c9bf",
-                    "on-secondary-container": "#4a6a4d",
-                    "surface-container-highest": "#e1e3e4",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed": "#00210e",
-                    "error": "#ba1a1a",
-                    "error-container": "#ffdad6",
-                    "primary-fixed": "#b8f0c5",
-                    "on-primary-fixed-variant": "#1d5031",
-                    "secondary-container": "#c5e9c5",
-                    "tertiary-fixed": "#ffd9dd",
-                    "inverse-surface": "#2e3132",
-                    "on-surface-variant": "#414942",
-                    "tertiary-container": "#6a323b",
-                    "on-tertiary-fixed": "#380b15",
-                    "on-error": "#ffffff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Plus Jakarta Sans"],
-                    "label": ["Plus Jakarta Sans"]
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Admin RA Management Portal | The Academic Curator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#366847",
+                        "secondary-fixed": "#c8ecc8",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#acd0ad",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8fafb",
+                        "on-tertiary-container": "#e89ca5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#03210b",
+                        "tertiary-fixed-dim": "#ffb2bb",
+                        "on-secondary-fixed-variant": "#2f4e33",
+                        "inverse-on-surface": "#eff1f2",
+                        "surface-bright": "#f8fafb",
+                        "background": "#f8fafb",
+                        "surface-container": "#eceeef",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "inverse-primary": "#9dd3aa",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d8dadb",
+                        "outline": "#717971",
+                        "on-primary-container": "#88bd95",
+                        "surface-container-low": "#f2f4f5",
+                        "secondary": "#466649",
+                        "on-tertiary-fixed-variant": "#6e353e",
+                        "tertiary": "#4f1c26",
+                        "primary-fixed-dim": "#9dd3aa",
+                        "primary-container": "#1a4d2e",
+                        "primary": "#00361a",
+                        "surface-container-high": "#e6e8e9",
+                        "outline-variant": "#c1c9bf",
+                        "on-secondary-container": "#4a6a4d",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#00210e",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b8f0c5",
+                        "on-primary-fixed-variant": "#1d5031",
+                        "secondary-container": "#c5e9c5",
+                        "tertiary-fixed": "#ffd9dd",
+                        "inverse-surface": "#2e3132",
+                        "on-surface-variant": "#414942",
+                        "tertiary-container": "#6a323b",
+                        "on-tertiary-fixed": "#380b15",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
             }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .font-headline { font-family: 'Manrope', sans-serif; }
         .material-symbols-outlined {
@@ -87,332 +86,174 @@
     </style>
 </head>
 <body class="bg-background text-on-surface">
-<!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
-<div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
-<div class="text-2xl font-black tracking-tighter text-emerald-900 dark:text-emerald-500 font-headline">
-                The Academic Curator
-            </div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="#">Portal</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="#">Matches</a>
-<a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="#">Chat</a>
-<a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 font-['Manrope'] font-bold tracking-tight" href="#">Admin</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="p-2 text-slate-500 hover:text-emerald-700 transition-colors">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<button class="p-2 text-slate-500 hover:text-emerald-700 transition-colors">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-</button>
-</div>
-</div>
+    <div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+        <div class="text-2xl font-black tracking-tighter text-emerald-900 dark:text-emerald-500 font-headline cursor-pointer" onclick="window.location.href='/'">
+            The Academic Curator
+        </div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1 font-['Manrope'] font-bold tracking-tight" href="/portal">Portal</a>
+            <a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="/dashboard">Matches</a>
+            <a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="/portal">Chat</a>
+            <a class="text-slate-500 dark:text-slate-400 font-medium font-['Manrope'] hover:text-emerald-700 transition-colors" href="/report">Admin</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button class="p-2 text-slate-500 hover:text-emerald-700 transition-colors">
+                <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+            </button>
+            <button class="p-2 text-slate-500 hover:text-emerald-700 transition-colors">
+                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+            </button>
+        </div>
+    </div>
 </header>
+
 <div class="flex pt-20 h-screen overflow-hidden">
-<!-- SideNavBar -->
-<aside class="hidden lg:flex flex-col p-6 gap-4 h-screen w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-<div class="mb-6">
-<h2 class="text-lg font-bold text-emerald-900 dark:text-emerald-500 font-headline">Student Portal</h2>
-<p class="text-xs text-slate-500 font-medium">Academic Curator</p>
+    <aside class="hidden lg:flex flex-col p-6 gap-4 h-screen w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="mb-6">
+            <h2 class="text-lg font-bold text-emerald-900 dark:text-emerald-500 font-headline">Student Portal</h2>
+            <p class="text-xs text-slate-500 font-medium">Academic Curator</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/dashboard">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span class="font-['Plus_Jakarta_Sans'] text-sm">Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/report">
+                <span class="material-symbols-outlined" data-icon="assessment">assessment</span>
+                <span class="font-['Plus_Jakarta_Sans'] text-sm">Reports</span>
+            </a>
+            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/dashboard">
+                <span class="material-symbols-outlined" data-icon="group">group</span>
+                <span class="font-['Plus_Jakarta_Sans'] text-sm">Matches</span>
+            </a>
+            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/questionnaire">
+                <span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+                <span class="font-['Plus_Jakarta_Sans'] text-sm">Questionnaire</span>
+            </a>
+            <a class="flex items-center gap-3 p-3 bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-400 font-semibold rounded-lg" href="/portal">
+                <span class="material-symbols-outlined" data-icon="forum">forum</span>
+                <span class="font-['Plus_Jakarta_Sans'] text-sm">Messages</span>
+            </a>
+        </nav>
+        <div class="mt-auto">
+            <button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-semibold shadow-sm hover:opacity-90 transition-opacity">
+                New Match Request
+            </button>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-8 bg-surface">
+        <div class="mb-10">
+            <h1 class="text-4xl font-headline font-extrabold tracking-tight text-primary mb-2">RA Management Portal</h1>
+            <p class="text-on-surface-variant max-w-2xl">Academic Year 2023-2024 • North Wing Residential Complex</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8">
+            <div class="col-span-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+                    <span class="text-sm font-label text-on-surface-variant">Active Residents</span>
+                    <div class="text-3xl font-headline font-bold text-primary mt-1">124</div>
+                </div>
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+                    <span class="text-sm font-label text-on-surface-variant">Check-ins Comp.</span>
+                    <div class="text-3xl font-headline font-bold text-primary mt-1">92%</div>
+                </div>
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+                    <span class="text-sm font-label text-on-surface-variant">Pending Issues</span>
+                    <div class="text-3xl font-headline font-bold text-tertiary mt-1">8</div>
+                </div>
+                <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+                    <span class="text-sm font-label text-on-surface-variant">Conflict Resolution</span>
+                    <div class="text-3xl font-headline font-bold text-secondary mt-1">3 <span class="text-sm font-normal text-on-surface-variant">open</span></div>
+                </div>
+            </div>
+
+            <div class="col-span-12 xl:col-span-8 bg-surface-container-lowest rounded-xl p-8 overflow-hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-headline font-bold text-on-surface">Monthly Check-in Status</h3>
+                    <div class="flex gap-2">
+                        <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">November 2023</span>
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-on-surface-variant text-sm font-label border-b border-outline-variant/20">
+                                <th class="pb-4 font-semibold">Resident Name</th>
+                                <th class="pb-4 font-semibold">Room</th>
+                                <th class="pb-4 font-semibold">Status</th>
+                                <th class="pb-4 font-semibold">Last Interaction</th>
+                                <th class="pb-4 font-semibold text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant/10">
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="py-4 font-medium">Ethan Henderson</td>
+                                <td class="py-4 text-on-surface-variant">402-A</td>
+                                <td class="py-4">
+                                    <span class="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg text-xs font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                        COMPLETED
+                                    </span>
+                                </td>
+                                <td class="py-4 text-on-surface-variant">Nov 12, 2023</td>
+                                <td class="py-4 text-right">
+                                    <button class="text-primary font-bold text-sm hover:underline">View Log</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-surface-container-low transition-colors">
+                                <td class="py-4 font-medium">Marcus Thorne</td>
+                                <td class="py-4 text-on-surface-variant">402-B</td>
+                                <td class="py-4">
+                                    <span class="inline-flex items-center gap-1.5 text-amber-700 bg-amber-50 px-2 py-1 rounded-lg text-xs font-bold">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                                        PENDING
+                                    </span>
+                                </td>
+                                <td class="py-4 text-on-surface-variant">Oct 28, 2023</td>
+                                <td class="py-4 text-right">
+                                    <button class="text-primary font-bold text-sm hover:underline">Notify</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-span-12 xl:col-span-4 flex flex-col gap-8">
+                <div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
+                    <h3 class="text-xl font-headline font-bold text-on-surface mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-tertiary">report_gmailerrorred</span>
+                        Reported Issues
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm border-l-4 border-tertiary">
+                            <div class="flex justify-between text-xs font-bold text-tertiary uppercase tracking-tighter mb-2">
+                                <span>High Priority</span>
+                                <span>1d ago</span>
+                            </div>
+                            <p class="text-sm text-on-surface leading-relaxed">"Hostile environment report. Roommate A and B have stopped communicating entirely."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-12 bg-primary p-12 rounded-2xl relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1 text-on-primary">
+                        <h2 class="text-3xl font-headline font-extrabold mb-4">Conflict Mediation Tool</h2>
+                        <p class="text-emerald-100/70 mb-8 max-w-lg leading-relaxed">
+                            Use our algorithmic mediation assistant to identify friction and schedule a session.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-surface-bright text-primary px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition-colors">Start New Session</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>
-<nav class="flex flex-col gap-2">
-<a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span class="font-['Plus_Jakarta_Sans'] text-sm">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 p-3 bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-400 font-semibold rounded-lg" href="#">
-<span class="material-symbols-outlined" data-icon="assessment">assessment</span>
-<span class="font-['Plus_Jakarta_Sans'] text-sm">Reports</span>
-</a>
-<a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
-<span class="material-symbols-outlined" data-icon="group">group</span>
-<span class="font-['Plus_Jakarta_Sans'] text-sm">Matches</span>
-</a>
-<a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
-<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
-<span class="font-['Plus_Jakarta_Sans'] text-sm">Questionnaire</span>
-</a>
-<a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="#">
-<span class="material-symbols-outlined" data-icon="forum">forum</span>
-<span class="font-['Plus_Jakarta_Sans'] text-sm">Messages</span>
-</a>
-</nav>
-<div class="mt-auto">
-<button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-semibold shadow-sm hover:opacity-90 transition-opacity">
-                    New Match Request
-                </button>
-</div>
-</aside>
-<!-- Main Content -->
-<main class="flex-1 overflow-y-auto p-8 bg-surface">
-<!-- Header Section -->
-<div class="mb-10">
-<h1 class="text-4xl font-headline font-extrabold tracking-tight text-primary mb-2">RA Management Portal</h1>
-<p class="text-on-surface-variant max-w-2xl">Academic Year 2023-2024 • North Wing Residential Complex</p>
-</div>
-<!-- Bento Grid Layout -->
-<div class="grid grid-cols-12 gap-8">
-<!-- Stats Overview (Glassmorphism row) -->
-<div class="col-span-12 grid grid-cols-1 md:grid-cols-4 gap-6">
-<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-<span class="text-sm font-label text-on-surface-variant">Active Residents</span>
-<div class="text-3xl font-headline font-bold text-primary mt-1">124</div>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-<span class="text-sm font-label text-on-surface-variant">Check-ins Comp.</span>
-<div class="text-3xl font-headline font-bold text-primary mt-1">92%</div>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-<span class="text-sm font-label text-on-surface-variant">Pending Issues</span>
-<div class="text-3xl font-headline font-bold text-tertiary mt-1">8</div>
-</div>
-<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-<span class="text-sm font-label text-on-surface-variant">Conflict Resolution</span>
-<div class="text-3xl font-headline font-bold text-secondary mt-1">3 <span class="text-sm font-normal text-on-surface-variant">open</span></div>
-</div>
-</div>
-<!-- Monthly Check-in Status Table -->
-<div class="col-span-12 xl:col-span-8 bg-surface-container-lowest rounded-xl p-8 overflow-hidden">
-<div class="flex justify-between items-center mb-6">
-<h3 class="text-xl font-headline font-bold text-on-surface">Monthly Check-in Status</h3>
-<div class="flex gap-2">
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">November 2023</span>
-</div>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left">
-<thead>
-<tr class="text-on-surface-variant text-sm font-label border-b border-outline-variant/20">
-<th class="pb-4 font-semibold">Resident Name</th>
-<th class="pb-4 font-semibold">Room</th>
-<th class="pb-4 font-semibold">Status</th>
-<th class="pb-4 font-semibold">Last Interaction</th>
-<th class="pb-4 font-semibold text-right">Action</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant/10">
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-4 font-medium">Ethan Henderson</td>
-<td class="py-4 text-on-surface-variant">402-A</td>
-<td class="py-4">
-<span class="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg text-xs font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                                            COMPLETED
-                                        </span>
-</td>
-<td class="py-4 text-on-surface-variant">Nov 12, 2023</td>
-<td class="py-4 text-right">
-<button class="text-primary font-bold text-sm hover:underline">View Log</button>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-4 font-medium">Marcus Thorne</td>
-<td class="py-4 text-on-surface-variant">402-B</td>
-<td class="py-4">
-<span class="inline-flex items-center gap-1.5 text-amber-700 bg-amber-50 px-2 py-1 rounded-lg text-xs font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-                                            PENDING
-                                        </span>
-</td>
-<td class="py-4 text-on-surface-variant">Oct 28, 2023</td>
-<td class="py-4 text-right">
-<button class="text-primary font-bold text-sm hover:underline">Notify</button>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-4 font-medium">Julianna Vane</td>
-<td class="py-4 text-on-surface-variant">215-C</td>
-<td class="py-4">
-<span class="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg text-xs font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                                            COMPLETED
-                                        </span>
-</td>
-<td class="py-4 text-on-surface-variant">Nov 14, 2023</td>
-<td class="py-4 text-right">
-<button class="text-primary font-bold text-sm hover:underline">View Log</button>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-low transition-colors">
-<td class="py-4 font-medium">Liam O'Connor</td>
-<td class="py-4 text-on-surface-variant">311-A</td>
-<td class="py-4">
-<span class="inline-flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg text-xs font-bold">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                                            COMPLETED
-                                        </span>
-</td>
-<td class="py-4 text-on-surface-variant">Nov 10, 2023</td>
-<td class="py-4 text-right">
-<button class="text-primary font-bold text-sm hover:underline">View Log</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- Reported Issues Feed (Anonymous) -->
-<div class="col-span-12 xl:col-span-4 flex flex-col gap-8">
-<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
-<h3 class="text-xl font-headline font-bold text-on-surface mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-tertiary" data-icon="report_gmailerrorred">report_gmailerrorred</span>
-                            Reported Issues
-                        </h3>
-<div class="space-y-4">
-<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
-<div class="flex justify-between text-xs font-bold text-tertiary uppercase tracking-tighter mb-2">
-<span>Noise Complaint</span>
-<span>2h ago</span>
-</div>
-<p class="text-sm text-on-surface leading-relaxed">"Repeated loud music in Suite 304 after midnight. Multiple attempts to resolve internally failed."</p>
-<div class="mt-3 flex justify-end">
-<button class="text-xs font-bold text-primary hover:text-primary-container">Mark as Read</button>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
-<div class="flex justify-between text-xs font-bold text-on-surface-variant uppercase tracking-tighter mb-2">
-<span>Maintenance</span>
-<span>5h ago</span>
-</div>
-<p class="text-sm text-on-surface leading-relaxed">"Kitchen sink in 212 is clogged. Water pooling."</p>
-<div class="mt-3 flex justify-end">
-<button class="text-xs font-bold text-primary hover:text-primary-container">Dispatch Maintenance</button>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm border-l-4 border-tertiary">
-<div class="flex justify-between text-xs font-bold text-tertiary uppercase tracking-tighter mb-2">
-<span>High Priority</span>
-<span>1d ago</span>
-</div>
-<p class="text-sm text-on-surface leading-relaxed">"Hostile environment report. Roommate A and B have stopped communicating entirely."</p>
-<div class="mt-3 flex justify-end">
-<button class="text-xs font-bold text-primary hover:text-primary-container">Initiate Mediation</button>
-</div>
-</div>
-</div>
-<button class="w-full mt-6 py-2 text-primary font-bold border-t border-outline-variant/20 pt-4 hover:opacity-80 transition-opacity">View All Reports</button>
-</div>
-</div>
-<!-- Conflict Mediation Tool -->
-<div class="col-span-12 bg-primary p-12 rounded-2xl relative overflow-hidden">
-<!-- Background Decor -->
-<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary-fixed-dim/10 rounded-full blur-3xl"></div>
-<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-tertiary/20 rounded-full blur-3xl"></div>
-<div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
-<div class="flex-1 text-on-primary">
-<h2 class="text-3xl font-headline font-extrabold mb-4">Conflict Mediation Tool</h2>
-<p class="text-emerald-100/70 mb-8 max-w-lg leading-relaxed">
-                                Use our algorithmic mediation assistant to identify the core personality friction between roommates and schedule a guided intervention session.
-                            </p>
-<div class="flex flex-wrap gap-4">
-<button class="bg-surface-bright text-primary px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition-colors">Start New Session</button>
-<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-bold hover:bg-emerald-900 transition-colors">View Active Cases</button>
-</div>
-</div>
-<div class="flex-1 w-full max-w-md">
-<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
-<span class="text-xs font-bold text-emerald-300 uppercase tracking-widest block mb-4">Quick Search Cases</span>
-<div class="relative">
-<input class="w-full bg-white/5 border-none text-white placeholder-white/40 rounded-lg p-4 focus:ring-2 focus:ring-emerald-400" placeholder="Enter student ID or room number..." type="text"/>
-<span class="material-symbols-outlined absolute right-4 top-4 text-white/50" data-icon="search">search</span>
-</div>
-<div class="mt-6 space-y-3">
-<div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5">
-<div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-emerald-400" data-icon="balance">balance</span>
-</div>
-<div>
-<div class="text-sm font-bold text-white">Case #4812 - Suite 109</div>
-<div class="text-xs text-white/60">Intervention Scheduled: Nov 22</div>
-</div>
-</div>
-<div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5">
-<div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-amber-400" data-icon="pending">pending</span>
-</div>
-<div>
-<div class="text-sm font-bold text-white">Case #4815 - Suite 304</div>
-<div class="text-xs text-white/60">Awaiting Response from Resident B</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Section: Resident Directory Asymmetric Layout -->
-<div class="col-span-12 py-10">
-<div class="flex items-end justify-between mb-8 border-b border-outline-variant/20 pb-4">
-<h2 class="text-2xl font-headline font-bold text-primary">Resident Directory</h2>
-<button class="text-sm font-bold text-on-surface-variant flex items-center gap-1">
-                            Filter by Floor
-                            <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
-</button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Profile Card 1 -->
-<div class="bg-surface-container-lowest rounded-xl p-6 group hover:translate-y-[-4px] transition-all duration-300">
-<div class="flex items-center gap-4 mb-4">
-<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="portrait of a confident university student with glasses in a campus setting, warm afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFNM2qh5lF1PBMz-T5IjkRxBaCZcUJNxtK5hTNpOWp19JwAzb_3xH7z8-Lc7epFzBeSEj0R26MHhGHTqIafnUICLVXsx6pdGDp0cERXMXGGw-dkkrJmwLxJjxKcZCebK4zgdVVDH5NWB8bLe3HSTvxXEYPiykJiS8ilxt5Uc2t6wT5Sm5TsvMElAxi-sA_q3x-dgT3nUFduOxJrJ0Yo2eCuUYT1iMSrj48fYXr3MG4ZMzeWHAYtZ2s4ULdnvN4pN-Nw-jkaG3s5SB8"/>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Alex Mercer</h4>
-<p class="text-sm text-on-surface-variant">Computer Science, Junior</p>
-</div>
-</div>
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase">Night Owl</span>
-<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold rounded-full uppercase">Introvert</span>
-</div>
-<div class="pt-4 border-t border-outline-variant/10 flex justify-between items-center">
-<span class="text-xs font-semibold text-emerald-600">Match Compatibility: 88%</span>
-<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</button>
-</div>
-</div>
-<!-- Profile Card 2 -->
-<div class="bg-surface-container-lowest rounded-xl p-6 group hover:translate-y-[-4px] transition-all duration-300">
-<div class="flex items-center gap-4 mb-4">
-<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="close up headshot of a friendly female student with curly hair smiling in a library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw7TjYs3faqFi6xCEOpQHaGisDbwVjIP5bvvTWPFhq9YAWRar9-ummBAbnXPb1ugBJTm_7uGCryqX0MLHlSFos44JS6VCy21E3zzTD2ZrFyrz4VzNwaGezT1vMPz-k8DjcBM9eUCL0nzru4cj4xTyZMb0bgfkUn7Izg9VFYiDOTGA3Y2Euar11xa3OrmT55hTcmpnyvwn_PdZw3dFGWkIgSvvI2o-iWcUohTMOeViN3IJK3yXDp7yYVafndPJT20vu8brm99gzv0bs"/>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Elena Rodriguez</h4>
-<p class="text-sm text-on-surface-variant">Fine Arts, Senior</p>
-</div>
-</div>
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase">Early Bird</span>
-<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold rounded-full uppercase">Clean Freak</span>
-</div>
-<div class="pt-4 border-t border-outline-variant/10 flex justify-between items-center">
-<span class="text-xs font-semibold text-emerald-600">Match Compatibility: 94%</span>
-<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</button>
-</div>
-</div>
-<!-- Profile Card 3 -->
-<div class="bg-surface-container-lowest rounded-xl p-6 group hover:translate-y-[-4px] transition-all duration-300">
-<div class="flex items-center gap-4 mb-4">
-<img alt="Student Profile" class="w-16 h-16 rounded-lg object-cover" data-alt="young male student in a denim jacket standing in a modern university hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWgcQMUtKhNsRyOUBlq1yp09ZhESn-IjdiAixBrTlvJlGwdKEyZ1pdA1mgFW38_kASLA3XL5tLUzNyNLVI2z8N12papGxUpO8wgvwmbIFTIN5x6i6E-Z58LPvH2kV0mWmtt9t1Ehj1Sb_TyTRjxAdCJI7WjjhwOl6kk2CjJ-QMVP1R3tXxibUwy8E86_JswDYNwq1YSr_8LO02_WZbWbyBaA60nq1AFUOdgfXg14LtgXalkYmcJP-LfHwIqoRHV7cNu_tTYMe7TSLK"/>
-<div>
-<h4 class="font-headline font-bold text-on-surface">Samson Blake</h4>
-<p class="text-sm text-on-surface-variant">Economics, Freshman</p>
-</div>
-</div>
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full uppercase">Extrovert</span>
-<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-[10px] font-bold rounded-full uppercase">Gamer</span>
-</div>
-<div class="pt-4 border-t border-outline-variant/10 flex justify-between items-center">
-<span class="text-xs font-semibold text-emerald-600">Match Compatibility: 72%</span>
-<button class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-<!-- Background Elements -->
-<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 opacity-30">
-<div class="absolute top-1/4 right-0 w-1/3 h-1/2 bg-emerald-100/20 blur-3xl rounded-full"></div>
-<div class="absolute bottom-1/4 left-10 w-1/4 h-1/4 bg-primary-fixed-dim/10 blur-2xl rounded-full"></div>
-</div>
-</body></html>
+</body>
+</html>
