@@ -109,39 +109,34 @@
 </header>
 
 <div class="flex pt-20 h-screen overflow-hidden">
-    <aside class="hidden lg:flex flex-col p-6 gap-4 h-screen w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-        <div class="mb-6">
-            <h2 class="text-lg font-bold text-emerald-900 dark:text-emerald-500 font-headline">Student Portal</h2>
-            <p class="text-xs text-slate-500 font-medium">Academic Curator</p>
-        </div>
-        <nav class="flex flex-col gap-2">
-            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/dashboard">
-                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-                <span class="font-['Plus_Jakarta_Sans'] text-sm">Dashboard</span>
-            </a>
-            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/report">
-                <span class="material-symbols-outlined" data-icon="assessment">assessment</span>
-                <span class="font-['Plus_Jakarta_Sans'] text-sm">Reports</span>
-            </a>
-            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/dashboard">
-                <span class="material-symbols-outlined" data-icon="group">group</span>
-                <span class="font-['Plus_Jakarta_Sans'] text-sm">Matches</span>
-            </a>
-            <a class="flex items-center gap-3 p-3 text-slate-600 hover:translate-x-1 transition-transform duration-200 rounded-lg" href="/questionnaire">
-                <span class="material-symbols-outlined" data-icon="quiz">quiz</span>
-                <span class="font-['Plus_Jakarta_Sans'] text-sm">Questionnaire</span>
-            </a>
-            <a class="flex items-center gap-3 p-3 bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-400 font-semibold rounded-lg" href="/portal">
-                <span class="material-symbols-outlined" data-icon="forum">forum</span>
-                <span class="font-['Plus_Jakarta_Sans'] text-sm">Messages</span>
-            </a>
-        </nav>
-        <div class="mt-auto">
-            <button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-semibold shadow-sm hover:opacity-90 transition-opacity">
-                New Match Request
-            </button>
-        </div>
-    </aside>
+    <aside class="h-screen w-64 bg-slate-50 border-r border-slate-200 flex flex-col p-6 gap-4 sticky top-0">
+    <div class="mb-8">
+        <h1 class="text-lg font-bold text-emerald-900">Scholar Bond</h1>
+        <p class="text-xs text-slate-500 font-medium">Student Portal</p>
+    </div>
+    <nav class="flex flex-col gap-2 flex-grow">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/dashboard">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/dashboard">
+            <span class="material-symbols-outlined">group</span>
+            <span>Matches</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/questionnaire">
+            <span class="material-symbols-outlined">quiz</span>
+            <span>Questionnaire</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/portal">
+            <span class="material-symbols-outlined">forum</span>
+            <span>Messages</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-200/50 hover:translate-x-1 transition-all rounded-lg" href="/report">
+            <span class="material-symbols-outlined">assessment</span>
+            <span>Reports</span>
+        </a>
+    </nav>
+</aside>
 
     <main class="flex-1 overflow-y-auto p-8 bg-surface">
         <div class="mb-10">
